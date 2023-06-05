@@ -1,3 +1,4 @@
+import jwtDecode from "jwt-decode";
 import { axiosReq } from "../api/axiosDefaults";
 
 // resource component below can be used for comments or profiles
@@ -51,4 +52,17 @@ export const unfollowHelper = (profile, clickedProfile) => {
       { ...profile, following_count: profile.following_count - 1 }
     : 
       profile;
+};
+
+export const setTokenTimestamp = (data) => {
+  const refreshTokenTimestamp = jwtDecode(data?.refresh_token).exp;
+  localStorage.setItem("refreshTokenTimestamp", refreshTokenTimestamp);
+};
+
+export const shouldRefreshToken = () => {
+  return !!localStorage.getItem("refreshTokenTimestamp");
+};
+
+export const removeTokenTimestamp = () => {
+  localStorage.removeItem("refreshTokenTimestamp");
 };

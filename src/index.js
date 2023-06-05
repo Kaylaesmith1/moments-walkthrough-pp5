@@ -9,6 +9,7 @@ import { ProfileDataProvider } from "./contexts/ProfileDataContext";
 
 
 // ReactDOM.render(
+  // StrictMode only to be used in dev situations, remove (but keep comma after Router) if doing final deployment
 //   <React.StrictMode>
 //     <Router>
 //     <CurrentUserProvider>
