@@ -2,19 +2,22 @@
 // PROBLEM W AVATAR IMAGE (LOOK IN OTHER GITPOD THAT'S CONNECTED). ASK ABOUT NAME CHANGE OF IMAGE ON SLACK?
 
 import React from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
+// Divide NavBar, Container and Nav into SEPARATE imports to minimize buildup of components.
+// import { Navbar, Container, Nav } from "react-bootstrap";
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
 import logo from "../assets/logo.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
-import {
-  useCurrentUser,
-  useSetCurrentUser,
-} from "../contexts/CurrentUserContext";
+// import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
+import { useCurrentUser } from "../contexts/CurrentUserContext";
+import { useSetCurrentUser } from "../contexts/CurrentUserContext";
+
 import Avatar from "./Avatar";
 import axios from "axios";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 import { removeTokenTimestamp } from "../utils/util";
-
 
 
 const NavBar = () => {

@@ -1,6 +1,11 @@
 // Need to include basic testing in PP5 -- use these to help
 
-import { render, screen, fireEvent } from "@testing-library/react";
+// import { render, screen, fireEvent } from "@testing-library/react";
+import { render } from "@testing-library/react";
+import { screen } from "@testing-library/react";
+import { fireEvent } from "@testing-library/react";
+
+
 import { BrowserRouter as Router } from "react-router-dom";
 import { CurrentUserProvider } from "../../contexts/CurrentUserContext";
 import NavBar from "../NavBar";
