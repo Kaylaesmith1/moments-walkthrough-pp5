@@ -39,7 +39,7 @@ const handleDelete = async () => {
     await axiosRes.delete(`/posts/${id}/`);
     history.goBack();
   } catch (err) {
-    console.log(err);
+    // console.log(err);
   }
 };
 
@@ -55,7 +55,7 @@ const handleLike = async () => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -71,7 +71,7 @@ const handleLike = async () => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
